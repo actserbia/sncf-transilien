@@ -1,7 +1,7 @@
 {
   "name": "webpack-yarn",
   "version": "0.0.1",
-  "description": "Webpack FrontEnd starter with yarn",
+  "description": "D3.js test project",
   "main": "index.js",
   "scripts": {
     "dev-local": "webpack-dev-server --hot --progress --colors --config=webpack_config/dev.config.js",

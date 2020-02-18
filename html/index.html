@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <style>
+
+        body {
+          font: 11px sans-serif;
+          margin: 0;
+        }
+        .stop-left {
+            stop-color: rgba(157,47,24, .5);  /* red */
+        }
+
+        .stop-right {
+            stop-color: rgba(112,174,26, .7);  /* green */
+        }
+
+        .filled {
+            fill: url(#mainGradient);
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .oneYearGraph .line-path{
+            fill: none;
+            stroke: white;
+            stroke-width: 8;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+        }
+        .oneYearGraph .dashed-path{
+            fill: none;
+            stroke: white;
+            opacity: .5;
+            stroke-width: 3;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+        }     
+        .oneYearGraph .lineGoal line{
+            stroke: white;
+            opacity: .4;
+        }
+        ellipse{
+            fill: rgb(255, 255, 0);
+        }
+        .oneYearGraph .lineGoal text{
+            fill: white;
+            opacity: .7;
+        }
+        .oneYearGraph .lineDropping{
+            fill: white;
+            opacity: .7;
+        }
+        .oneYearGraph .circles{
+            fill: white;
+        }
+        .oneYearGraph .xAxis line{
+            display: none;
+        }
+        .oneYearGraph .percents text{
+            fill: white;
+            font-size: 16px;
+        }
+        .oneYearGraph .xAxis{
+            color: white;
+            opacity: .7;
+            font-size: 16px;
+        }
+        .oneYearGraph .domain{
+            stroke: none;
+        }
+        .oneYearGraph text{
+            text-transform: uppercase;
+        }
+        .wrap{
+            display: flex;
+            background: darkgrey;
+            padding: 20px;
+        }
+        .wrap .pie{
+            width: 200px;
+            height: 203px;
+            background: #333333;
+            padding: 20px;
+            color: white;
+        }
+        .noWidth{
+            width: 0;
+            transition: all 1s linear;
+            overflow: hidden;
+            background: #333333;
+        }
+        .noWidth.resized{            
+            width: 85%;
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            margin: auto;
+            border: 1px solid red;
+        }
+        .stop-right2{
+            stop-color: rgba(51,51,51, 0); 
+        }
+        .stop-left2{
+            stop-color: rgba(51,51,51, 1); 
+        }
+        .filled2{
+            fill: url(#mainGradient2);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="pie">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+            <div class="circle"></div>
+        </div>
+        <div class="noWidth">
+            <svg class="oneYearGraph"></svg>      
+        </div>
+        
+    </div>
+    <!-- <svg class="verticalBar"></svg> -->
+
+
+    <script src="js/master.bundle.js"></script>   
+</body>
+</html>
